@@ -1,0 +1,136 @@
+/* Define custom CSS variables */
+:root {
+    --off-white: #e6dfdf;
+    /* Define off-white color */
+    --off-white-hover: #b9b4b4;
+    /* Define off-white hover color */
+}
+
+/* Dashboard styles */
+.dashboard {
+    margin-top: 30px;
+}
+
+.dashboard .title {
+    color: var(--off-white);
+    /* Use custom CSS variable for color */
+    font-size: 50px;
+}
+
+.dashboard .subtitle {
+    color: var(--off-white);
+    /* Use custom CSS variable for color */
+    font-size: 20px;
+}
+
+.dashboard .subtitle a {
+    text-decoration: underline;
+    color: var(--off-white);
+    /* Use custom color variable */
+}
+
+.dashboard .subtitle a:hover {
+    color: var(--off-white-hover);
+    /* Use custom hover color variable */
+}
+
+.dashboard .showcase {
+    margin-top: 25px;
+    background-color: #222a32;
+    border-radius: 5px;
+    width: 60%;
+    padding: 15px 0;
+}
+
+.showcase_title {
+    color: var(--off-white);
+    /* Use custom CSS variable for color */
+    font-size: 35px;
+}
+
+/* Customize the showcase1 div */
+.showcase_item {
+    display: flex;
+    /* Use flex display to create a row layout */
+    align-items: center;
+    /* Vertically center items within the div */
+}
+
+/* Add margin-bottom to showcases that aren't the last one */
+.showcase_item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.showcase_item .image {
+    flex: 1;
+    /* Make the image take up 1/3 of the available space */
+}
+
+.showcase_item .image img {
+    width: 90%;
+    display: block;
+    /* Remove extra space under the image */
+    border-radius: 5px;
+}
+
+.showcase_item .showcase_item_content {
+    flex: 2;
+    /* Make the content take up 2/3 of the available space */
+    padding: 10px;
+    /* Add padding for spacing */
+    color: var(--off-white);
+    /* Set text color using the custom variable */
+}
+
+/* Additional styling for the title and description */
+.showcase_item h2 {
+    font-size: 24px;
+    /* Set the title font size */
+}
+
+/* Additional styling for the title and description */
+.showcase_item h2 a {
+    text-decoration: underline;
+    color: var(--off-white);
+    /* Use custom color variable */
+}
+
+.showcase_item h2 a:hover {
+    color: var(--off-white-hover);
+    /* Use custom hover color variable */
+}
+
+.showcase_item p {
+    font-size: 16px;
+    /* Set the description font size */
+}
+
+/* Media query to show/hide elements based on screen width */
+@media (max-width: 1000px) {
+    .showcase_item {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+        align-items: center;
+        /* Center items horizontally */
+    }
+
+    .showcase_item .image {
+        flex: none;
+        /* Reset the image flex value */
+        margin-bottom: 10px;
+        /* Add some space between the image and content */
+    }
+
+    .showcase_item .image img {
+        max-width: 50%;
+        /* Make sure the image fits within its container */
+        height: auto;
+        /* Maintain image aspect ratio */
+    }
+}
+
+@media (max-width: 550px) {
+    .dashboard .showcase {
+        width: 100%;
+    }
+}

@@ -1,0 +1,60 @@
+{% extends "index.html" %}
+
+{% block title %}Work{% endblock %}
+
+{% block head %}
+<!-- Include the work-specific CSS file -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/work.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <h1 class="title">My Work</h1>
+    <h2 class="subtitle">I work on many projects, however at the moment I'm mostly working private. You can find all my
+        public work on my <a href="/redirect/github" target="_blank" rel="noopener noreferrer">Github</a>.</h2>
+    <br>
+    <h2 class="showcase_title">Showcase</h2>
+    <div class="showcase">
+        <div class="showcase_item">
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/pfp.jpg') }}" alt="" srcset="">
+            </div>
+            <div class="showcase_item_content">
+                <h2>My Portfolio (This Website)</h2>
+                <p>Unfortunatly for security reasons, the code for this website is private for now. However, I used a
+                    mix of HTML, CSS (Font Awesome), JS (Jquery), and Python (Flask) (Librarys in brackets) to make it.
+                    It was fun to make and I'm happy with how it turned out.</p>
+            </div>
+        </div>
+        <div class="showcase_item">
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/ai-universal.png') }}" alt="" srcset="">
+            </div>
+            <div class="showcase_item_content">
+                <h2>AI Universal</h2>
+                <p>In my position as a co-owner at AI Universal, I assume the role of the lead developer responsible for
+                    orchestrating our project's architectural design and development. Working in close collaboration
+                    with a highly skilled team, we harness our collective proficiency in Python, HTML, CSS, and
+                    JavaScript to craft groundbreaking solutions. My unwavering dedication to keeping abreast of the
+                    latest advancements in AI empowers us to deliver state-of-the-art services to a diverse clientele,
+                    encompassing individuals, educational institutions, and businesses alike.</p>
+            </div>
+        </div>
+        <div class="showcase_item">
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/flask.png') }}" alt="" srcset="">
+            </div>
+            <div class="showcase_item_content">
+                <h2><a href="https://github.com/thewhsmith/flask-session" target="_blank"
+                        rel="noopener noreferrer">Flask Session</a></h2>
+                <p>Elevate your Flask web app with Flask-Session, an extension that seamlessly integrates server-side
+                    session management. Plus, enjoy the added benefit of my fixes (mongodb storage) to the original
+                    package.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

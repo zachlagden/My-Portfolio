@@ -1,0 +1,95 @@
+/* Define custom CSS variables */
+:root {
+    --off-white: #e6dfdf;
+    /* Define off-white color */
+    --off-white-hover: #b9b4b4;
+    /* Define off-white hover color */
+}
+
+/* Introduction styles */
+.introduction {
+    margin-top: 30px;
+}
+
+/* Username and subtitle styles */
+.introduction .username {
+    color: var(--off-white);
+    /* Use custom color variable */
+    font-size: 50px;
+}
+
+.introduction .subtitle {
+    color: var(--off-white-hover);
+    /* Use custom hover color variable */
+    font-size: 18px;
+}
+
+/* Container styles within the introduction */
+.introduction .description {
+    margin-top: 25px;
+    background-color: #222a32;
+    border-radius: 5px;
+    width: 60%;
+    padding: 15px 0;
+    /* Simplify padding */
+}
+
+/* Link styles within the container */
+.introduction .description h a {
+    text-decoration: underline;
+    color: var(--off-white);
+    /* Use custom color variable */
+}
+
+/* Hover styles for links */
+.introduction .description h a:hover {
+    color: var(--off-white-hover);
+    /* Use custom hover color variable */
+}
+
+/* Image styles */
+.introduction img {
+    border-radius: 50%;
+    width: 200px;
+}
+
+/* Heading styles within the introduction */
+.introduction h {
+    color: var(--off-white);
+    /* Use custom color variable */
+    font-size: 22px;
+}
+
+/* Hide element with the ID "song" */
+#song {
+    display: none;
+}
+
+.icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    /* Customize icon color */
+    font-size: 24px;
+    /* Customize icon size */
+    cursor: pointer;
+}
+
+.pfp {
+    margin-bottom: 20px;
+}
+
+/* Media query to show/hide elements based on screen width */
+@media (max-width: 550px) {
+
+    /* Container styles within the introduction */
+    .introduction .description {
+        width: 100%;
+    }
+
+    /* Heading styles within the introduction */
+    .introduction h {
+        font-size: 25px;
+    }
+}

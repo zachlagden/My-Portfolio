@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Me - whsmith">
+    <meta name="description"
+        content="Greetings, I'm whsmith, a software developer who prefers to maintain a low profile.">
+    <meta name="keywords"
+        content="software dev, python, anti-social-media, business owner, young, programmer, coding, web development, app development, technology, coding languages, software engineer, entrepreneurship, startups, computer science, coding skills, programming languages, software projects, digital world, coding enthusiast, tech industry, innovative, creative, developer tools, coding community, coding culture, software solutions, coding experience, coding journey, software development career, programming skills, coding passion, coding expertise, programming mastery, software architecture, software design, coding knowledge, coding techniques, coding practices, coding challenges, coding projects, coding languages, software innovation, coding excellence, coding tutorials, coding resources, coding tips, coding tricks, coding strategies, coding techniques, coding hacks, coding techniques, coding best practices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="whsmith">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/particles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"
+        integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    {% block head %}{% endblock %}
+    <title>{% block title %}{% endblock %} - whsmith</title>
+</head>
+
+<body align="center">
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li><a href="#"><i class="fa fa-xmark close_nav" aria-hidden="true"></i></a></li>
+            <li><a href="/"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+            <li><a href="/work"><i class="fa fa-briefcase" aria-hidden="true"></i></a></li>
+            <li><a href="/socials"><i class="fa fa-hashtag" aria-hidden="true"></i></a></li>
+            <li><a href="/admin"><i
+                        class="fa {{ 'fa-sign-in' if not signed_in == True else 'fa-bars-progress'}} low-hanging-nav"
+                        aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    <div class="mobile-nav-toggle">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <div class="content" align="center">
+        {% block content %}{% endblock %}
+    </div>
+    {% block js %}{% endblock %}
+</body>
+
+</html>

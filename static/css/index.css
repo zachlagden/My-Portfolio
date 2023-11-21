@@ -1,0 +1,125 @@
+:root {
+    --background-colour: #001220;
+    --navigation-colour: #192026e8;
+    --navigation-colour-mobile: #192026;
+    --divider-colour: white;
+}
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: var(--background-colour);
+    margin: 0;
+    /* Remove default body margin */
+}
+
+.content {
+    background-color: var(--navigation-colour);
+    margin: 15px;
+    /* Add margin to create space between content and the edge of the website */
+    padding: 15px;
+    /* Optional padding inside the content div */
+    border-radius: 5px;
+    overflow: auto;
+    /* Add overflow to handle content that exceeds the div height */
+    position: absolute;
+    /* Use absolute positioning */
+    top: 0;
+    left: 92px;
+    /* Adjust for the width of the navigation */
+    right: 0px;
+    /* Ensure the content div is always fully extended */
+    bottom: 0px;
+    /* Adjust for bottom margin */
+}
+
+.navigation {
+    background-color: var(--navigation-colour);
+    width: 75px;
+    position: fixed;
+    top: 15px;
+    /* Adjust for top margin */
+    left: 15px;
+    /* Adjust for left margin */
+    bottom: 15px;
+    /* Adjust for bottom margin */
+    border-radius: 5px;
+    z-index: 69;
+}
+
+/* Initially hide the navigation */
+.navigation {
+    display: block;
+}
+
+.mobile-nav-toggle {
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 1000;
+    /* Ensure it's above other content */
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    /* Adjust the size as needed */
+}
+
+/* Media query to show/hide elements based on screen width */
+@media (max-width: 750px) {
+
+    /* Show the navigation on wider screens */
+    .navigation {
+        display: none;
+    }
+
+    /* Hide the mobile navigation icon on wider screens */
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    /* Ensure content takes up all space when navigation is hidden */
+    .content {
+        left: 0px;
+    }
+
+    .navigation {
+        background-color: var(--navigation-colour-mobile);
+    }
+}
+
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    margin-top: 40px;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    transition: 0.s;
+}
+
+.navigation li a:hover {
+    color: grey;
+}
+
+.low-hanging-nav {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    /* Add any additional styling you need for the low-hanging-nav here */
+}
+
+.close_nav {
+    display: none;
+}

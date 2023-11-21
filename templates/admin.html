@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+
+{% block title %}Admin{% endblock %}
+
+{% block head %}
+<!-- Include the admin-specific CSS file -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+   <h1 class="title">Admin Dashboard</h1>
+   <h2 class="subtitle">{{ greeting }}, {{ username }}.</h2>
+   <br>
+   <div class="sotw_controller">
+      <h2 class="dashboard_subtitle">Song of the week</h2>
+      <div class="input-container">
+         <!-- Input field for Song URL -->
+         <input type="text" id="customInput" class="custom-input" placeholder="Enter Song URL">
+         <!-- Button to update the Song of the Week -->
+         <button id="SOTWUpdateButton" class="btn-update">Update</button>
+         <!-- Display messages here -->
+         <div id="message" class="message"></div>
+         <br><br>
+         <!-- Loading image while processing -->
+         <img id="loader" src="{{ url_for('static', filename='images/loading.gif') }}" alt="Loading...">
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<!-- Include the admin-specific JavaScript file -->
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+{% endblock %}

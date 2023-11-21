@@ -1,0 +1,40 @@
+{% extends "index.html" %} {% block title %}Me{% endblock %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/home.css') }}"
+/>
+{% endblock %} {% block content %}
+<audio
+  id="song"
+  src="{{ url_for('static', filename='custom_content/song_of_the_week.mp3') }}"
+  controls
+></audio>
+<div class="introduction">
+  <img
+    class="pfp"
+    src="{{ url_for('static', filename='images/pfp.jpg') }}"
+    alt=""
+  />
+  <br />
+  <h class="username">Greetings, I'm whsmith.</h>
+  <br /><br />
+  <h class="subtitle">A developer who prefers to maintain a low profile.</h>
+  <div class="description">
+    <h
+      >I have some awesome playlists, you can find my Spotify
+      <a href="/redirect/spotify">here</a>. You can contact me
+      <a href="/redirect/email">here</a>. You can also listen to my
+      <a
+        href="{{ song_of_the_week['url'] }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        >fave song</a
+      >
+      of the week in the top right.</h
+    >
+  </div>
+  <i class="fa fa-play icon" onclick="toggleSongOfTheWeek()"></i>
+</div>
+{% endblock %} {% block js %}
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}
